@@ -23,10 +23,10 @@ public class Commande extends AbstractEntity{
     @ManyToOne
     @JoinColumn(name = "id_commande")
     private Client client ;
-    @OneToMany(mappedBy = "commande")
-    private List<HistoriquePaiement> historiquePaiements ;
     @ManyToOne
     @JoinColumn(name = "id_user")
     private User user ;
+    @OneToMany(mappedBy = "commande")
+    private List<HistoriquePaiement> historiquePaiements ;
 
 }
